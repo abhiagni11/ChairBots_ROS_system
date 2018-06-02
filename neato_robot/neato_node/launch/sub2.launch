@@ -1,0 +1,12 @@
+<launch>
+	<param name="use_sim_time" value="false"/>
+
+ 
+  <node name="neato03" pkg="neato_node" type="sub-sensor03.py" output="screen">
+    <param name="port1" value="/dev/ttyACM1" />
+  </node>
+  <node name="touch03" pkg="neato_node" type="arduino03.py">
+    <param name="port0" value="/dev/ttyACM0" />
+  </node>
+
+</launch>

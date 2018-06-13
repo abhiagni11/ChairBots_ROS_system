@@ -19,7 +19,7 @@ class NeatoNode:
     	""" Start up connection to the Neato Robot. """
     	rospy.init_node('teleop03', anonymous=True)
 
-    	self.port = rospy.get_param('~port1', "/dev/ttyACM1")
+    	self.port = rospy.get_param('~port', "/dev/ttyACM0")
     	rospy.loginfo("Using port: %s"%(self.port))
 
     	self.robot = Botvac(self.port)
